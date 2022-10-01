@@ -11,27 +11,36 @@ export default function SignleReview({ book }) {
   );
 }
 
-export async function getStaticProps({ params }) {
-  const book = await getBookFromId(params.id);
-
-  return {
-    props: {
-      book: book,
-    },
-    // this allows to refetch the data from db after an amount of time
-    revalidate: 10
-  };
+export async function getServerSideProps({params}) {
+    const book = await getBookFromId(params.id)
+    return {
+        props: {
+            book
+        }
+    }
 }
 
-export async function getStaticPaths() {
-  const books = await getBooks();
-  const paths = books.map((book) => ({
-    params: {
-      id: book.id,
-    },
-  }));
-  return {
-    paths: paths,
-    fallback: false,
-  };
-}
+// export async function getStaticProps({ params }) {
+//   const book = await getBookFromId(params.id);
+
+//   return {
+//     props: {
+//       book: book,
+//     },
+//     // this allows to refetch the data from db after an amount of time
+//     revalidate: 10
+//   };
+// }
+
+// export async function getStaticPaths() {
+//   const books = await getBooks();
+//   const paths = books.map((book) => ({
+//     params: {
+//       id: book.id,
+//     },
+//   }));
+//   return {
+//     paths: paths,
+//     fallback: false,
+//   };
+// }
