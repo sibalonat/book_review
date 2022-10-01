@@ -1,6 +1,7 @@
+import clasess from "../styles/Books.module.css";
 const BookItem = ({ name, description, author, imgUrl, id}) => {
     return (
-        <li>
+        <li className={clasess.listItem}>
             <img src={imgUrl} alt={name} />
             <h3>{name}</h3> 
             <h3>{author}</h3> 
