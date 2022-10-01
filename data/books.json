@@ -1,16 +1,1 @@
-[
-    {
-        "id": "1",
-        "name": "name of the the book",
-        "author": "who else",
-        "imgUrl": "https://loremflickr.com/320/240",
-        "description": "what is there to say"
-    },
-    {
-        "id": "1",
-        "name": "name of the the book",
-        "author": "who else",
-        "imgUrl": "https://loremflickr.com/320/240",
-        "description": "what is there to say"
-    }
-]
+[{"id":"1","name":"name of the the book","author":"who else","imgUrl":"https://loremflickr.com/320/240","description":"what is there to say"},{"id":"1","name":"name of the the book","author":"who else","imgUrl":"https://loremflickr.com/320/240","description":"what is there to say"},{"name":"Simone Price","description":"Quidem delectus vit","imgUrl":"Corrupti qui aut it","author":"Facilis dolorum est ","id":1664660980776}]
