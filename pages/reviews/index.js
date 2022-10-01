@@ -1,16 +1,17 @@
 import { getBooks } from "../../utils/api-utils";
+import Link  from "next/link";
 
 export default function Reviews({ books }) {
-  // return <h1> {books}</h1>
   return (
     <div>
       <ul>
         {books.map((book) => (
-          <li>
+          <li key={book.id}>
             <div>
               <h1>{book.name}</h1>
               <p>{book.author}</p>
               <p>{book.description}</p>
+              <article> <Link href={`/reviews/${book.id}`}>Go to sigle</Link> </article>
             </div>
           </li>
         ))}
